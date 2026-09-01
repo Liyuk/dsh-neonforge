@@ -4,7 +4,33 @@ DSH Neonforge 是 DSH Web 工作台的独立视觉层实验仓库：保留原有
 
 设计说明见 [`docs/design/neonforge-ui.md`](docs/design/neonforge-ui.md)。
 
+项目底稿、社区宣发稿和 Neonforge 专属文档见 [`docs/neonforge/README.zh.md`](docs/neonforge/README.zh.md)。
+
 [English](README.md) | 中文
+
+## 项目概览
+
+Neonforge 是面向 DeepSeek Harness Web profile 的独立社区视觉皮肤。它改变工作台的呈现方式，同时保留 DSH 的会话、工具、权限、工作区、Agent runtime 和插件组合能力。
+
+- 深色和浅色主题共享同一套后朋克工业控制台语言。
+- 为工作区文件夹、会话、Composer 控件和运行状态提供更清晰的层级。
+- 通过限定作用域的 CSS 和 DSH 扩展点加载，不替换宿主 runtime。
+- 设置中提供皮肤开关，并支持 `prefers-reduced-motion`，适合长时间工作。
+
+![DSH Neonforge 深色控制台](docs/neonforge/assets/neonforge-dark.png)
+
+![DSH Neonforge 浅色纸张与油墨](docs/neonforge/assets/neonforge-light.png)
+
+## 安装
+
+```sh
+dsh plugin --profile web add npm:@liyuk/dsh-neonforge
+dsh web
+```
+
+启动后打开 DSH 设置，选择 **Neonforge 皮肤**，即可启用皮肤并切换深色或浅色模式。
+
+项目底稿、设计说明、仓库结构和社区宣发稿见 [Neonforge 项目文档](docs/neonforge/README.md)。宣发稿提供[英文版](docs/neonforge/community-promo.md)和[中文版](docs/neonforge/community-promo.zh.md)。
 
 DeepSeek Harness（`dsh`）是由 [DeepSeek AI](https://deepseek.com) 开发的开源 agent harness（智能体框架）。
 
