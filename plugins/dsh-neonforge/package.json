@@ -1,0 +1,30 @@
+{
+  "name": "dsh-neonforge",
+  "version": "0.2.0",
+  "description": "Post-punk zine-collage visual skin for the DSH Web workbench.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Liyuk/dsh-neonforge.git"
+  },
+  "homepage": "https://github.com/Liyuk/dsh-neonforge#readme",
+  "bugs": { "url": "https://github.com/Liyuk/dsh-neonforge/issues" },
+  "keywords": ["deepseek-harness", "dsh", "dsh-plugin", "theme", "neonforge"],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": ["lib", "assets", "cordis.patch.yml", "README.md"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "inject": ["@deepseek-ai/dsh-client-runtime", "@deepseek-ai/dsh-client-ui-slots", "@deepseek-ai/dsh-client-ui-theme"]
+    }
+  },
+  "peerDependencies": { "@deepseek-ai/cordis": "*" }
+}

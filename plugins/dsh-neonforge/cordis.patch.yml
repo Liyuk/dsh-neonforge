@@ -1,0 +1,4 @@
+# Load the Neonforge visual skin as a profile bundle.
+- insert:
+    - id: neonforge
+      name: dsh-neonforge
